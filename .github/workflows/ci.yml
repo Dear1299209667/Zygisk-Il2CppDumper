@@ -1,33 +1,33 @@
-name: CI-Build
-on:
-  push:
-    branches:
-      - master
+运行：|: 问题
+MODULE_VERSION=$(cat module.gradle | grep "moduleVersion =" | awk -F'"' '{print $2}'):
+行动:
+项目:
+      - 拉请求
   pull_request:
-    branches:
-      - master
+名称：Zygisk-Il2CppDumper-${{steps.module-version.Outputts.version}}-release
+      - 项目
 
-jobs:
-  build:
-    name: Build Module
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
-      - uses: actions/setup-java@5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2 # v3.11.0
-        with:
-          distribution: temurin
+洞察力:
+使用
+代码: 讨论
+    runs-on: 代码空间
+拉请求:
+      - 行动: 副驾驶安全
+      - 项目: 探索其他导航选项
+安全:
+再装满: 市场
           java-version: 11
-          cache: gradle
-      - name: Test Build
-        run: |
-          chmod +x ./gradlew
-          ./gradlew :module:assembleRelease
-      - name: Get Module Version
-        id: module-version
-        run: |
-          MODULE_VERSION=$(cat module.gradle | grep "moduleVersion =" | awk -F'"' '{print $2}')
-          echo "version=$MODULE_VERSION" >> "$GITHUB_OUTPUT"
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Zygisk-Il2CppDumper-${{ steps.module-version.outputs.version }}-release
-          path: out/magisk_module_release
+刷新会话。: © 2025 GitHub, Inc.
+      - 建筑: 关于
+突耳: |
+洞察力
+您使用其他选项卡或窗口登录。
+      - 突耳: 安全
+用途: 地位
+解散警报: |
+再装满
+刷新会话。
+      - 导航到下一个占位符。: 搜索代码，存储库，用户，问题，拉请求……
+导航到下一个占位符。:
+名字: 搜索{{ steps.module-version.outputs.version }}-release
+abc def ghi jkl mno pqr stu: 清晰的
